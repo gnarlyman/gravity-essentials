@@ -25,6 +25,10 @@ namespace Space
         public float verticalSpeed = 2.0f;
 
         public Attractor attractor; 
+        public float rotationRate = 0.1f;
+
+        private float _pitch;
+        public GameObject playerCamera;
 
         private void FixedUpdate()
         {
@@ -37,9 +41,9 @@ namespace Space
             rb.AddForce(vVelocity + hVelocity);
 
             var direction = rb.position - attractor.closest.rb.position;
-            Quaternion rotation = Quaternion.FromToRotation(t.up, direction);
-            t.rotation = rotation * t.rotation; 
-            // transform.Rotate(transform.up * (_horizontal * rotationSpeed * Time.fixedDeltaTime));
+            var rotation = Quaternion.FromToRotation(t.up, direction);
+            // t.rotation = rotation * t.rotation;
+            rb.rotation = Quaternion.Lerp(rb.rotation, rotation * t.rotation, rotationRate);
         }
 
         private void Update()
@@ -48,7 +52,10 @@ namespace Space
             float h = horizontalSpeed * Input.GetAxis("Mouse X");
             float v = verticalSpeed * Input.GetAxis("Mouse Y") * -1;
 
-            transform.Rotate(v, h, 0);
+            _pitch = Mathf.Clamp(_pitch + -v, -89, 89);
+            playerCamera.transform.localRotation = Quaternion.Euler(_pitch, 0 ,0);
+
+            transform.Rotate(0, h, 0);
         }
     }
 }

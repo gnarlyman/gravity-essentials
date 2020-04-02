@@ -24,6 +24,7 @@ namespace Space
 
         private void FixedUpdate()
         {
+            closestDistance = 0f;
             foreach (var attractor in _attractors.Where(attractor => attractor != this))
             {
                 Attract(attractor);
@@ -71,12 +72,6 @@ namespace Space
             }
             _hasOrbit = true;
         }
-
-        private void Update()
-        {
-
-        }
-
         private void OnDisable()
         {
             _attractors.Remove(this);

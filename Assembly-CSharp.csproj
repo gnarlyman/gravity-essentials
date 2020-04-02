@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Space\Attractor.cs" />
+     <Compile Include="Assets\Scripts\Space\GravityFpsWalker.cs" />
      <Compile Include="Assets\Scripts\Space\Player.cs" />
      <Compile Include="Assets\Scripts\Space\Util.cs" />
      <Compile Include="Assets\Scripts\Space\World.cs" />

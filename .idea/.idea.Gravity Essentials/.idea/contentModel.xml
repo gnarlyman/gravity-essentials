@@ -9,6 +9,7 @@
         <e p="Scripts" t="Include">
           <e p="Space" t="Include">
             <e p="Attractor.cs" t="Include" />
+            <e p="GravityFPSWalker.cs" t="Include" />
             <e p="Player.cs" t="Include" />
             <e p="Util.cs" t="Include" />
             <e p="World.cs" t="Include" />

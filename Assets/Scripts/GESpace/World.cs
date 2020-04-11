@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Space
+namespace GESpace
 {
     public class World : MonoBehaviour
     {

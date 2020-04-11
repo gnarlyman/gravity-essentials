@@ -1,9 +1,8 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Space
+namespace GESpace
 {
     public class Attractor : MonoBehaviour
     {
@@ -37,7 +36,7 @@ namespace Space
             
             if (!initialized && orbit.initialized)
             {
-                var velocity = CalculateOrbitVelocity(orbit, distance);
+                var velocity = CalculateOrbitalVelocity(orbit, distance);
                 orbitPeriod = CalculateOrbitalPeriod(orbit, distance);
             
                 var rotated = Quaternion.AngleAxis(orbitAngleDegrees, orbitAngleAxis) * direction;
@@ -93,16 +92,24 @@ namespace Space
             if (distance < 1f)
                 return;
 
-            var forceMagnitude = G * (rb.mass * rbToAttract.mass) / 
-                                 Mathf.Pow(distance, 2);
+            var forceMagnitude = CalculateGravityMagnitude(rb.mass, rbToAttract.mass, distance);
 
             var force = direction.normalized * forceMagnitude;
             
             rbToAttract.AddForce(force);
         }
 
-        private static float CalculateOrbitVelocity(Attractor objectToOrbit, float distance)
+        private static float CalculateGravityMagnitude(float m1, float m2, float distance) 
         {
+            // Gravitational Force
+            // F = G * (m2 * M1) / distance^2
+            return G * (m2 * m1) / Mathf.Pow(distance, 2);
+        }
+
+        private static float CalculateOrbitalVelocity(Attractor objectToOrbit, float distance)
+        {
+            // Orbital Velocity
+            // V = SQRT [ G*Mcentral/R ]
             return Mathf.Sqrt(G * objectToOrbit.rb.mass / distance);
         }
 
@@ -110,10 +117,9 @@ namespace Space
         {
             // Orbital Period
             // T = SQRT [(4 • pi^2 • R^3) / (G*Mcentral)]
-            var t = Mathf.Sqrt((4 * Mathf.Pow(Mathf.PI, 2) * 
+            return Mathf.Sqrt((4 * Mathf.Pow(Mathf.PI, 2) * 
                                 Mathf.Pow(distance, 3)) / 
                                (G * objectToOrbit.rb.mass));
-            return t;
         }
         
     }

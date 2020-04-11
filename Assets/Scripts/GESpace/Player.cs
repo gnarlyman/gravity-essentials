@@ -1,7 +1,6 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Space
+namespace GESpace
 {
     public class Player : MonoBehaviour
     {

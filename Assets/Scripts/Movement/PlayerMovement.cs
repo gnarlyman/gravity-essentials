@@ -66,10 +66,7 @@ namespace Movement
                 // Rotate Player to the hit object's up vector
                 // RotatePlayerToObjectUp();
             }
-            // If no ground, rotate Player toward the nearest Attractor
-            // RotatePlayerToAttractor();
         }
-        
         private void FixedUpdate()
         {
             // Move Player

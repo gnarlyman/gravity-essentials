@@ -23,6 +23,7 @@
           </e>
           <e p="Movement" t="Include">
             <e p="MouseLook.cs" t="Include" />
+            <e p="PlayerCamera.cs" t="Include" />
             <e p="PlayerMovement.cs" t="Include" />
           </e>
         </e>

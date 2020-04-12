@@ -69,6 +69,7 @@
      <Compile Include="Assets\Scripts\GESpace\Util.cs" />
      <Compile Include="Assets\Scripts\GESpace\World.cs" />
      <Compile Include="Assets\Scripts\Movement\MouseLook.cs" />
+     <Compile Include="Assets\Scripts\Movement\PlayerCamera.cs" />
      <Compile Include="Assets\Scripts\Movement\PlayerMovement.cs" />
      <Compile Include="Assets\Starfield Skybox\Demo\Script\LookCamera.cs" />
  <Reference Include="Unity.Timeline.Editor">

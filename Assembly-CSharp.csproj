@@ -81,11 +81,26 @@
  <Reference Include="Unity.2D.PixelPerfect.Editor">
  <HintPath>D:/Unity/Gravity101/Gravity Essentials/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.ProGrids">
+ <HintPath>D:/Unity/Gravity101/Gravity Essentials/Library/ScriptAssemblies/Unity.ProGrids.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.VSCode.Editor">
  <HintPath>D:/Unity/Gravity101/Gravity Essentials/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.ProBuilder">
+ <HintPath>D:/Unity/Gravity101/Gravity Essentials/Library/ScriptAssemblies/Unity.ProBuilder.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.ProBuilder.Editor">
+ <HintPath>D:/Unity/Gravity101/Gravity Essentials/Library/ScriptAssemblies/Unity.ProBuilder.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
+ <HintPath>D:/Unity/Gravity101/Gravity Essentials/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.2D.SpriteShape.Editor">
  <HintPath>D:/Unity/Gravity101/Gravity Essentials/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.ProGrids.Editor">
+ <HintPath>D:/Unity/Gravity101/Gravity Essentials/Library/ScriptAssemblies/Unity.ProGrids.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>D:/Unity/Gravity101/Gravity Essentials/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
@@ -138,6 +153,9 @@
  <Reference Include="Unity.2D.Animation.Editor">
  <HintPath>D:/Unity/Gravity101/Gravity Essentials/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.ProBuilder.AddOns.Editor">
+ <HintPath>D:/Unity/Gravity101/Gravity Essentials/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Mathematics.Editor">
  <HintPath>D:/Unity/Gravity101/Gravity Essentials/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
  </Reference>
@@ -152,24 +170,6 @@
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>D:/Unity/Gravity101/Gravity Essentials/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="Unity.ProBuilder">
- <HintPath>D:/Unity/Gravity101/Gravity Essentials/Library/ScriptAssemblies/Unity.ProBuilder.dll</HintPath>
- </Reference>
- <Reference Include="Unity.ProBuilder.Editor">
- <HintPath>D:/Unity/Gravity101/Gravity Essentials/Library/ScriptAssemblies/Unity.ProBuilder.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
- <HintPath>D:/Unity/Gravity101/Gravity Essentials/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
- </Reference>
- <Reference Include="Unity.ProBuilder.AddOns.Editor">
- <HintPath>D:/Unity/Gravity101/Gravity Essentials/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.ProGrids">
- <HintPath>D:/Unity/Gravity101/Gravity Essentials/Library/ScriptAssemblies/Unity.ProGrids.dll</HintPath>
- </Reference>
- <Reference Include="Unity.ProGrids.Editor">
- <HintPath>D:/Unity/Gravity101/Gravity Essentials/Library/ScriptAssemblies/Unity.ProGrids.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Games/Unity/2019.3.6f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

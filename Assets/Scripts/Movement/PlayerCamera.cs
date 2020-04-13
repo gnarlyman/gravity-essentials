@@ -8,10 +8,11 @@ namespace Movement
         public Transform playerFace;
         public float rotationRate;
         
-        private void FixedUpdate()
+        private void LateUpdate()
         {
-            transform.position = playerFace.position;
-            transform.rotation = playerFace.rotation;
+            var transform1 = transform;
+            transform1.position = playerFace.position;
+            transform1.rotation = playerFace.rotation;
             
         }
     }

@@ -36,7 +36,7 @@ namespace Movement
             _rb = GetComponent<Rigidbody>();
         }
 
-        private void Update()
+        private void FixedUpdate()
         {
             // Collect Player Input
             _inputXAxis = Input.GetAxis("Horizontal");
@@ -66,11 +66,11 @@ namespace Movement
                 // Rotate Player to the hit object's up vector
                 // RotatePlayerToObjectUp();
             }
-        }
-        private void FixedUpdate()
-        {
+        // }
+        // private void FixedUpdate()
+        // {
             // Move Player
-            var tPos = transform.position;
+            // var tPos = transform.position;
             _rb.MovePosition(tPos + Time.deltaTime * currentSpeed * 
                 transform.TransformDirection(_inputXAxis, 0f, _inputZAxis));
 

@@ -58,20 +58,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\PlayerMovement.cs" />
-     <Compile Include="Assets\Scripts\Demonstration.cs" />
-     <Compile Include="Assets\Scripts\FixedInterpolation\InterpolatedTransform.cs" />
-     <Compile Include="Assets\Scripts\FixedInterpolation\InterpolatedTransformUpdater.cs" />
-     <Compile Include="Assets\Scripts\FixedInterpolation\InterpolationController.cs" />
+     <Compile Include="Assets\Black Hole\Script\Demo.cs" />
+     <Compile Include="Assets\Black Hole\Script\FreeCamera.cs" />
      <Compile Include="Assets\Scripts\GESpace\Attractor.cs" />
-     <Compile Include="Assets\Scripts\GESpace\GravityFpsWalker.cs" />
-     <Compile Include="Assets\Scripts\GESpace\Player.cs" />
-     <Compile Include="Assets\Scripts\GESpace\Util.cs" />
      <Compile Include="Assets\Scripts\GESpace\World.cs" />
      <Compile Include="Assets\Scripts\Movement\MouseLook.cs" />
      <Compile Include="Assets\Scripts\Movement\PlayerCamera.cs" />
      <Compile Include="Assets\Scripts\Movement\PlayerMovement.cs" />
      <Compile Include="Assets\Starfield Skybox\Demo\Script\LookCamera.cs" />
+     <None Include="Assets\Black Hole\ReadMe.txt" />
+     <None Include="Assets\Black Hole\Shader\Black Hole.shader" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>D:/Unity/Gravity101/Gravity Essentials/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>

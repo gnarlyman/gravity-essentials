@@ -13,7 +13,6 @@ namespace Movement
             var transform1 = transform;
             transform1.position = playerFace.position;
             transform1.rotation = playerFace.rotation;
-            
         }
     }
 }

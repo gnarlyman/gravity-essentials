@@ -3,28 +3,23 @@
 namespace Movement
 {
     [RequireComponent(typeof(Rigidbody))]
-    public class PlayerMovement: MonoBehaviour
+    public class PlayerMovement : MonoBehaviour
     {
-        [Header("Walk / Run Setting")] 
-        public float walkSpeed;
+        [Header("Walk / Run Setting")] public float walkSpeed;
         public float runSpeed;
-        
-        [Header("Jump Settings")] 
-        public float playerJumpForce;
+
+        [Header("Jump Settings")] public float playerJumpForce;
         public ForceMode appliedForceMode;
-        
-        [Header("Player State")] 
-        public bool playerIsJumping;
+
+        [Header("Player State")] public bool playerIsJumping;
         public bool playerIsSprinting;
         public float currentSpeed;
-        
-        [Header("Player Rotation")]
-        public GESpace.Attractor attractor;
+
+        [Header("Player Rotation")] public GESpace.Attractor attractor;
         public float rotationRate;
 
-        [Header("Debug")] 
-        public float distanceToGround;
-        
+        [Header("Debug")] public float distanceToGround;
+
 
         private float _inputXAxis;
         private float _inputZAxis;
@@ -36,14 +31,18 @@ namespace Movement
             _rb = GetComponent<Rigidbody>();
         }
 
-        private void FixedUpdate()
+        private void Update()
         {
             // Collect Player Input
             _inputXAxis = Input.GetAxis("Horizontal");
             _inputZAxis = Input.GetAxis("Vertical");
             playerIsJumping = Input.GetButton("Jump");
             playerIsSprinting = Input.GetKey(KeyCode.LeftShift);
-            
+        }
+
+        private void FixedUpdate()
+        {
+
             // Player Sprint/Run
             currentSpeed = playerIsSprinting ? runSpeed : walkSpeed;
             
@@ -57,24 +56,16 @@ namespace Movement
             {
                 // If Ground found and player is close enough
                 distanceToGround = Vector3.Distance(tPos, _hit.point);
-                if (distanceToGround > 2f)
-                {
-                    // player is not jumping
-                    playerIsJumping = false;
-                }
-
                 // Rotate Player to the hit object's up vector
                 // RotatePlayerToObjectUp();
             }
-        // }
-        // private void FixedUpdate()
-        // {
+
             // Move Player
             // var tPos = transform.position;
             _rb.MovePosition(tPos + Time.deltaTime * currentSpeed * 
                 transform.TransformDirection(_inputXAxis, 0f, _inputZAxis));
 
-            if (playerIsJumping)
+            if (distanceToGround < 0.2f && playerIsJumping)
                 PlayerJump(playerJumpForce, appliedForceMode);
             
             // If no ground, rotate Player toward the nearest Attractor
@@ -83,7 +74,7 @@ namespace Movement
 
         private void PlayerJump(float jumpForce, ForceMode forceMode)
         {
-            _rb.AddForce(jumpForce * _rb.mass * Time.deltaTime * Vector3.up, forceMode);
+            _rb.AddForce(jumpForce * _rb.mass * Time.deltaTime * transform.up, forceMode);
         }
 
         private void RotatePlayerToObjectUp()

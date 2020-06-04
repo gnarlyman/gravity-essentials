@@ -62,6 +62,10 @@
      <Compile Include="Assets\Black Hole\Script\FreeCamera.cs" />
      <Compile Include="Assets\Scripts\GESpace\Attractor.cs" />
      <Compile Include="Assets\Scripts\GESpace\World.cs" />
+     <Compile Include="Assets\Scripts\Generate\Chunk.cs" />
+     <Compile Include="Assets\Scripts\Generate\ChunkId.cs" />
+     <Compile Include="Assets\Scripts\Generate\VoxelEngine.cs" />
+     <Compile Include="Assets\Scripts\Generate\World.cs" />
      <Compile Include="Assets\Scripts\Movement\MouseLook.cs" />
      <Compile Include="Assets\Scripts\Movement\PlayerCamera.cs" />
      <Compile Include="Assets\Scripts\Movement\PlayerMovement.cs" />

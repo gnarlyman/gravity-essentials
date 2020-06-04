@@ -17,6 +17,12 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Generate" t="Include">
+            <e p="Chunk.cs" t="Include" />
+            <e p="ChunkId.cs" t="Include" />
+            <e p="VoxelEngine.cs" t="Include" />
+            <e p="World.cs" t="Include" />
+          </e>
           <e p="GESpace" t="Include">
             <e p="Attractor.cs" t="Include" />
             <e p="World.cs" t="Include" />

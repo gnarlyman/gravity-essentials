@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\mschon\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\mschon\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Gravity Essentials.645165413.00" t="ExcludeRecursive" />
-    <e p="D:\Unity\Gravity101\Gravity Essentials" t="IncludeRecursive">
+    <e p="C:\Users\Mike Schon\AppData\local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Mike Schon\AppData\local\JetBrains\Rider2020.3\resharper-host\local\Transient\Rider\v203\SolutionCaches\_Gravity Essentials.-475651131.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Mike Schon\RiderProjects\gravity-essentials" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Black Hole" t="Include">

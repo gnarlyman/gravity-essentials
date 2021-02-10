@@ -12,7 +12,6 @@ namespace Generate
         private void Start()
         {
             var chunkGameObject = new GameObject("Chunk 0, 0, 0");
-            chunkGameObject.transform.parent = transform.parent;
             var chunk = chunkGameObject.AddComponent<Chunk>();
             _world.Chunks.Add(new ChunkId(0,0,0), chunk);
             // Set material
